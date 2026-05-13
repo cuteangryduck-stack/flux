@@ -541,7 +541,7 @@ export default function App() {
              <div className="max-w-md w-full bg-zinc-900 p-8 rounded-2xl border border-zinc-800 shadow-2xl bg-sidebar border-theme">
                <div className="flex flex-col items-center mb-10">
                  <h1 className="text-5xl font-black tracking-tight text-center bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent">QwFlux</h1>
-                 <p className="text-zinc-500 text-sm mt-2">Online video & chat meeting</p>
+                 <p className="text-blue-200 text-sm mt-2">P2P Chat and Video meeting</p>
                </div>
               
                <div className="space-y-6">
@@ -556,13 +556,13 @@ export default function App() {
                   />
                  </div>
 
-                 <div className="pt-4 border-t border-zinc-800">
+                 <div className="pt-4 border-t border-purple-800">
                    <button 
                     onClick={handleCreate}
                     disabled={isConnecting}
-                    className="w-full py-3 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 rounded-xl font-semibold mb-3 transition-all active:scale-95 flex items-center justify-center gap-2"
+                    className="w-full py-3 bg-blue-400 hover:bg-blue-600 disabled:opacity-55 rounded-xl font-semibold mb-3 transition-all active:scale-95 flex items-center justify-center gap-2"
                    >
-                    {isConnecting && !joinId ? <Loader2 className="w-4 h-4 animate-spin" /> : "Create New Meeting"}
+                    {isConnecting && !joinId ? <Loader2 className="w-4 h-4 animate-spin" /> : "Create Meeting"}
                    </button>
                   
                    <div className="relative flex items-center py-4">
@@ -577,8 +577,8 @@ export default function App() {
                       maxLength={6} 
                       value={joinId}
                       onChange={(e) => setJoinId(e.target.value.toUpperCase())}
-                      placeholder="6-digit code" 
-                      className="flex-1 bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 text-center font-mono uppercase tracking-widest focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                      placeholder="Join Code" 
+                      className="flex-1 bg-purple-800 border border-purple-700 rounded-xl px-4 py-3 text-center font-mono uppercase tracking-widest focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                     />
                      <button 
                       onClick={() => handleJoin(false)}
@@ -819,8 +819,8 @@ export default function App() {
                   
                    <div className="p-6 space-y-6">
                      <div className="space-y-3">
-                       <label className="text-xs font-bold text-zinc-500 uppercase tracking-wider flex items-center gap-2 text-secondary">
-                         <User className="w-3 h-3" /> Display Name
+                       <label className="text-xs font-bold text-blue-300 uppercase tracking-wider flex items-center gap-2 text-secondary">
+                         <User className="w-3 h-3" /> Name (Display)
                        </label>
                        <input 
                         type="text" 
